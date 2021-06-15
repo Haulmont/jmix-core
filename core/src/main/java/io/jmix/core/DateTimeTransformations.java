@@ -95,6 +95,8 @@ public class DateTimeTransformations {
             return zonedDateTime.toLocalDateTime();
         } else if (OffsetDateTime.class.equals(javaType)) {
             return zonedDateTime.toOffsetDateTime();
+        } else if (LocalTime.class.equals(javaType)) {
+            return zonedDateTime.toLocalTime();
         }
         throw newUnsupportedTypeException(javaType);
     }
